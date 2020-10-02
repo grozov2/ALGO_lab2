@@ -76,8 +76,10 @@ int main()
 	printf("Введите размер массивов: ");
 	scanf_s("%d", &size);
 	fopen_s(&f, "res.txt", "a+");
-	fprintf(f, "Размер массива=:");
-	fprintf(f, "%d \n", size);
+	while (size!=0)
+	{
+		fprintf(f, "Размер массива=:");
+		fprintf(f, "%d \n", size);
 
 	for (int i = 0; i < size; i++) {   //Заполнение массива рандомными числами
 		m[i] = rand() % 100 + 1;
@@ -232,7 +234,10 @@ int main()
 			fprintf(f, "Ф-я быстрой сортировки:");
 			fprintf(f, "%d \n\n", search_time);
 
-
+			printf("Введите размер массивов: ");
+			scanf_s("%d", &size);
+			}
+			
 	fclose(f);
 	return (0);
 }
